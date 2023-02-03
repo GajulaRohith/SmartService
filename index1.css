@@ -1,0 +1,33 @@
+body
+{
+  background-size:cover;
+  align-items: center;
+  justify-content:center;
+  background-color:paleturquoise;
+  
+}
+#count_ed
+{
+    text-align:center;
+    font-family:Lucida Sans;
+    font-size:34px;
+    text-shadow:20px;
+}
+#b
+{
+    text-align:center;
+    margin-top:12px;
+    margin-bottom:10px;
+    font-family:cursive;
+    color:black;
+}
+.increment
+{
+    font-size:35px;
+    margin-top:20px;
+    position:absolute;
+    border-radius:10px;
+    background-color:whitesmoke;
+    padding:10px;
+    margin-left:325px;
+}

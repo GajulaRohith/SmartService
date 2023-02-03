@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><title>Time displayed</title>
+<script>
+   
+      var a=new Date();
+      var h=a.getHours();
+     if(h>=12 && h<19)
+     {
+        document.write("afternoon");
+     }
+     else if(h>18  && h<=23)
+     {  
+      document.writeln("Session:Night");
+     }
+     else if(h>0 && h<13)
+     {
+        document.write("Morning");
+     }
+     else
+     {
+        alert("Enter a proper time");
+     }
+    
+</script>
+<body>
+<!-- <h1>SESSION OF THE GIVEN TIME</h1><br>
+<form name="myform" onsubmit="timevalidate()">
+Enter the time:
+<input type="text" name="t1"><br><br>
+<input type="submit" value="click" >
+</form> -->
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+<head>
+<title> number conversion</title>
+<script>
+function con()
+{
+var d,m,str1,str2;
+var n=document.f1.number.value;
+str1="";
+var ones=new Array("","one ","two ","three ","four ","five ","six ","seven ","eight ","nine ");
+var tens=new Array("","","twenty ","thirty ","forty ","fifty ","sixty ","seventy ","eighty ","ninety ");
+var str2=new Array("ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen");
+if(n<0)
+{
+document.f1.result.value="";
+alert("enter positive number");
+}
+if(n>999)
+{
+alert("out of range");
+document.f1.result.value="";
+}
+if(n==" "||isNaN(n))
+{
+alert("enter valid number");
+document.f1.result.value="";
+}
+if(n==0)
+{
+document.f1.result.value="zero";
+}
+if(n>0&&n<=999)
+{
+m=n.toString();
+while(m.charAt(0)=='0')
+{
+m=m.substring(1,m.length);
+}
+x=m.length;
+if(x==3)
+{
+var c2=parseInt(m.charAt(2));
+var c1=parseInt(m.charAt(1));
+var c0=parseInt(m.charAt(0));
+if(c1==1)
+{
+str1+=ones[c0]+"hundred "+str2[c2];
+}
+else
+{
+str1+=ones[c0]+"hundred "+tens[c1]+ones[c2];
+}
+}
+if(x==2)
+{
+var c1=parseInt(m.charAt(1));
+var c0=parseInt(m.charAt(0));
+if(c0==1)
+{
+str1+=str2[c1];
+}
+else
+{
+str1+=tens[c0]+ones[c1];
+}
+}
+
+if(x==1)
+{
+var c0=parseInt(m.charAt(0));
+var str1=ones[c0];
+document.f1.result.value=str1;
+}
+document.f1.result.value=str1;
+}
+}
+</script>
+</head>
+<body bgcolor="pink">
+<h2>Conversion of a number to Words</h2>
+<form name="f1" method="get">
+Enter a Number:<input type=text name="number"><br><br>
+Number in words:<input type=text name="result"><br><br>
+<input type=button value="convert" onclick="con()"><br>
+</form>
+</body>
+</html>

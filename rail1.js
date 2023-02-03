@@ -1,0 +1,1 @@
+document.getElementById("count_ed").innerHTML=5;

@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>Registration form </title>
+<style>
+    #username{
+        padding-bottom: 10px;
+    }
+    #user1{
+        padding-bottom: 10px;
+    }
+    .a{
+        font-family:Verdana;
+        padding-top: 50px;
+    }
+</style>
+<script>
+    function f1()
+    {
+         var msg="";
+   var name=document.register.textUN.value; 
+   var rn=/^[A-Za-z]\w{6,}$/;
+   var pwn=document.register.textPW.value;
+   var rpwn=/^\w{4,}$/;
+   var em=document.register.mail.value; 
+   var rem=/^[a-zA-Z0-9.!]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+   var phn=document.register.phnum.value; 
+   var rphn=/^[0-9]{10}$/;
+   if(!name.match(rn))
+   {
+    msg+="Enter the name properly";
+   }else if(!pwn.match(rpwn))
+   {
+    msg+="please enter the password atleast six characters";
+   }
+   else if(!em.match(rem))
+   {
+    msg+="please enter the email properly";
+   }
+   else if(!phn.match(rphn))
+   {
+    msg+="enter the phone number properly";
+   }
+   if(msg!="")
+   {
+    alert(msg);
+    return false;
+   }
+   document.register.action="simple.html";
+   return true;
+}
+</script>
+</head>
+<body bgcolor="silver">
+<h1>Register Form for student(VJIT college)</h1>
+<form name="register" onclick="f1()">
+<table align="center" bgcolor="tomato">
+<tr>
+    <td id="user1">Username</td>
+    <td id="username"><input type="text" name="textUN" ></td>
+</tr>
+<tr>
+    <td>Password:</td>
+    <td><input type="password" name="textPW"></td>
+</tr>
+<tr>
+    <td>E-mail:</td>
+    <td><input type="email" name="mail"></td>
+</tr>
+<tr>
+    <td>Phone.NO:</td>
+    <td><input type="text" name="phnum"></td>
+</tr>
+<tr>
+    <td>Gender:</td>
+    <td>Male<input type="radio" name="gender">
+    Female<input type="radio" name="gender"></td>
+</tr>
+<tr>
+    <td>Date of Birth:</td>
+    <td><input type="date" name="dob"></td>
+</tr>
+<tr>
+    <td>Bio:</td>
+    <td><input type="text" name="add1"></td>
+</tr>
+<tr>
+    <td>Languages Known:</td>
+    <td><input type="checkbox" name="chtel">Telugu <br>
+    <input type="checkbox" name="cheng" >English <br>
+    <input type="checkbox" name="chhin" >Hindhi<br>
+    <input type="checkbox" name="cheng">French<br>
+    </td>
+</tr>
+<tr>
+    <td>Address:</td>
+    <td><Textarea type="textarea" name="add" rows="4" cols="20"></Textarea></td>
+</tr>
+<tr>
+    <td colspan="4" align="center" class="a"><input type="submit" value="Submit">
+                                 <input type="reset" value="Reset"></td>
+</tr>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
